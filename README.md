@@ -18,10 +18,11 @@ and visit [http://localhost:8888](http://localhost:8888) for jupyter notebook
 You can use the command in jupyter to plot images
 
 ```python
-%matplot notebook
+%matplotlib notebook
 import matplotlib.pyplot as plt
 plt.plot([1,2,3])
 ```
 
 and you can see the imags below:
+
 ![screenshot](screenshot.png)
