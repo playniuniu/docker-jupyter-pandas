@@ -1,7 +1,7 @@
 FROM alpine:edge
 MAINTAINER playniuniu@gmail.com
 
-ENV PACKAGES python3 openblas libstdc++ libpng freetype
+ENV PACKAGES curl openssl python3 openblas libstdc++ libpng freetype
 ENV BUILD_ESSENTIAL make gcc g++ python3-dev openblas-dev libpng-dev freetype-dev
 ENV PIP_PACKAGE scipy matplotlib pandas scikit-learn seaborn bokeh jupyter
 
