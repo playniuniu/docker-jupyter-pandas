@@ -3,7 +3,7 @@ MAINTAINER playniuniu@gmail.com
 
 ENV PACKAGES curl openssl python3 openblas libstdc++ libpng freetype ttf-opensans
 ENV BUILD_ESSENTIAL make gcc g++ python3-dev openblas-dev libpng-dev freetype-dev
-ENV PIP_PACKAGE scipy matplotlib openpyxl xlrd pandas scikit-learn seaborn bokeh jupyter
+ENV PIP_PACKAGE scipy matplotlib openpyxl xlrd pandas scikit-learn ipywidgets seaborn bokeh jupyter
 
 COPY jupyter_notebook_config.py /root/.jupyter/jupyter_notebook_config.py
 
@@ -14,6 +14,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/reposit
     && /env/bin/pip install --upgrade pip \
     && /env/bin/pip install numpy \
     && /env/bin/pip install ${PIP_PACKAGE} \
+    && /env/bin/jupyter nbextension enable --py --sys-prefix widgetsnbextension \
     && apk del ${BUILD_ESSENTIAL} \
     && rm -rf /var/cache/apk/* \
     && rm -rf /root/.cache/pip/*
