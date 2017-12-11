@@ -8,7 +8,6 @@ ENV PIP_PACKAGE scipy matplotlib openpyxl xlrd pandas pandas-datareader scikit-l
 COPY jupyter_notebook_config.py /root/.jupyter/jupyter_notebook_config.py
 
 RUN apk add --no-cache --update ${PACKAGES} ${BUILD_ESSENTIAL} \
-    && ln -s /usr/include/locale.h /usr/include/xlocale.h \
     && python3 -m venv /env/ \
     && /env/bin/pip install --upgrade pip \
     && /env/bin/pip install numpy \
