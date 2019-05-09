@@ -1,7 +1,7 @@
 FROM alpine:latest
 LABEL maintainer="playniuniu@gmail.com"
 
-ENV PACKAGES curl openssl python3 py3-lxml openblas libstdc++ libpng freetype
+ENV PACKAGES curl openssl python3 py3-lxml openblas libstdc++ libpng freetype libzmq
 ENV BUILD_ESSENTIAL make gcc g++ python3-dev openblas-dev libpng-dev freetype-dev jpeg-dev zeromq-dev
 ENV PIP_PACKAGE scipy matplotlib openpyxl xlrd pandas pandas-datareader scikit-learn seaborn bokeh statsmodels jupyterlab
 
