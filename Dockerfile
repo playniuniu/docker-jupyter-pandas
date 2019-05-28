@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:edge
 LABEL maintainer="playniuniu@gmail.com"
 
 ENV PACKAGES curl openssl python3 py3-lxml openblas libstdc++ libpng freetype libzmq jpeg
