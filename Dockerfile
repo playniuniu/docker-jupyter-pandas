@@ -1,4 +1,4 @@
-hkROM alpine:edge
+FROM alpine:edge
 LABEL maintainer="playniuniu@gmail.com"
 
 ENV PACKAGES curl openssl python3 py3-pip py3-numpy py3-scipy py3-pandas py3-matplotlib py3-pillow py3-lxml openblas libffi libzmq
@@ -18,4 +18,4 @@ COPY jupyter_notebook_config.py /root/.jupyter/jupyter_notebook_config.py
 VOLUME /opt/
 EXPOSE 8888
 
-CMD ["jupyter", "lab", "--allow-root"]
+CMD ["jupyter", "lab"]
