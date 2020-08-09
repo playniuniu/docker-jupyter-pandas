@@ -2,7 +2,6 @@
 
 This is docker image for Python3, Jupyter and Pandas, based on alpine linux
 
-
 ### Run
 
 You can run the command below:
@@ -18,9 +17,9 @@ and visit [http://localhost:8888](http://localhost:8888) for jupyter notebook
 You can use the command in jupyter to plot images
 
 ```python
-%matplotlib notebook
-import matplotlib.pyplot as plt
-plt.plot([1,2,3])
+import numpy as np
+import matplotlib.pylab as plt
+plt.plot(np.arange(1, 10, 2))
 ```
 
 and you can see the imags below:
