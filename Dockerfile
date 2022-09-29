@@ -11,6 +11,7 @@ RUN apk add --no-cache --update ${PACKAGES} \
     && mkdir /root/.jupyter
 
 COPY jupyter_notebook_config.py /root/.jupyter/jupyter_notebook_config.py
+COPY jupyter_lab_config.py /root/.jupyter/jupyter_lab_config.py
 
 VOLUME /opt/
 EXPOSE 8888
