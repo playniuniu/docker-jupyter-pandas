@@ -1,4 +1,8 @@
+c = get_config()
+c.NotebookApp.allow_origin = '*'
+c.NotebookApp.allow_credentials = True
 c.NotebookApp.allow_root = True
+c.NotebookApp.allow_remote_access = True
 c.NotebookApp.ip = '0.0.0.0'
 c.NotebookApp.port = 8888
 c.NotebookApp.token = ''

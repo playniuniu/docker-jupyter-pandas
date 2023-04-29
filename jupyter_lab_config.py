@@ -1,6 +1,10 @@
+c = get_config()
+c.ServerApp.allow_origin = '*'
+c.ServerApp.allow_credentials = True
 c.ServerApp.allow_root = True
 c.ServerApp.allow_remote_access = True
 c.ServerApp.ip = '0.0.0.0'
 c.ServerApp.port = 8888
 c.ServerApp.token = ''
+c.ServerApp.open_browser = False
 c.ServerApp.root_dir = '/opt/'
